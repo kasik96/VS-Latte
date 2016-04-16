@@ -1,0 +1,46 @@
+{
+	"name": "latte",
+	"displayName": "Latte Language",
+	"description": "Latte language support for VS Code",
+	"version": "0.0.1",
+	"publisher": "Kasik96",
+	"engines": {
+		"vscode": "^0.10.1"
+	},
+	"icon": "icon.png",
+	"categories": [
+		"Languages"
+	],
+	"galleryBanner": {
+		"color": "#EA7D28",
+		"theme": "light"
+	},
+	"bugs": {
+		"url": "https://github.com/kasik96/Swift-VS-Code/issues",
+		"email": "kasemartin@icloud.com"
+	},
+	"homepage": "https://github.com/kasik96/Swift-VS-Code",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/kasik96/Swift-VS-Code"
+	},
+	"contributes": {
+		"languages": [{
+			"id": "latte",
+			"aliases": ["Latte", "latte"],
+			"extensions": [".latte"],
+			"configuration": "./latte.configuration.json"
+		}],
+		"grammars": [{
+			"language": "latte",
+			"scopeName": "source.latte",
+			"path": "./syntaxes/latte.tmLanguage"
+		}],
+		"snippets": [
+			{
+				"language": "latte",
+				"path": "./snippets/snippets.json"
+			}
+		]
+	}
+}

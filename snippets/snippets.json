@@ -1,0 +1,72 @@
+{
+	"scope": "source.latte",
+
+	"completions":
+	[
+		{ "trigger": "block", "contents": "{block ${1:content}}\n$0\n{/block}" },
+		{ "trigger": "snippet", "contents": "{snippet ${1:content}}\n$0\n{/snippet}" },
+		{ "trigger": "layout", "contents": "{layout '${1:../@layout.latte}'}\n$0" },
+		{ "trigger": "extends", "contents": "{extends '${1:../@layout.latte}'}\n$0" },
+		{ "trigger": "capture", "contents": "{capture \\$${1:var}}\n$0\n{/capture}" },
+		{ "trigger": "define", "contents": "{define ${1:content}}\n$0\n{/define}" },
+		{ "trigger": "include", "contents": "{include #${1:content}}\n$0" },
+		{ "trigger": "includeblock", "contents": "{includeblock '${1:file.latte}'}\n$0" },
+		{ "trigger": "foreach", "contents": "{foreach \\$$1s as \\$$1}\n$0\n{/foreach}" },
+		{ "trigger": "while", "contents": "{while \\$$1 = \\$$1s->fetch()}\n$0\n{/while}" },
+		{ "trigger": "for", "contents": "{for \\$${1:i} = 0; \\$${1:i} < ${2:10}; \\$${1:i}++}\n$0\n{/for}" },
+		{ "trigger": "first", "contents": "{first}\n$0\n{/first}" },
+		{ "trigger": "last", "contents": "{last}\n$0\n{/last}" },
+		{ "trigger": "sep", "contents": "{sep}\n$0\n{/sep}" },
+		{ "trigger": "continueIf", "contents": "{continueIf \\$${1:foo}}$0" },
+		{ "trigger": "breakIf", "contents": "{breakIf \\$${1:foo}}$0" },
+		{ "trigger": "if", "contents": "{if \\$${1:foo}}\n$0\n{/if}" },
+		{ "trigger": "ifset", "contents": "{ifset \\$${1:foo}}\n$0\n{/ifset}" },
+		{ "trigger": "cache", "contents": "{cache \\$${1:var}}\n$0\n{/cache}" },
+		{ "trigger": "default", "contents": "{default \\$${1:foo = ''}}$0" },
+		{ "trigger": "link", "contents": "{link ${1:Default}}\n$0" },
+		{ "trigger": "plink", "contents": "{plink ${1:Default}}\n$0" },
+		{ "trigger": "control", "contents": "{control ${1:foo}}\n$0" },
+		{ "trigger": "form", "contents": "{form ${1:foo}}\n$0\n{/form}" },
+		{ "trigger": "label", "contents": "{label ${1:foo} /}\n" },
+		{ "trigger": "input", "contents": "{input ${1:foo}}\n$0" },
+		{ "trigger": "syntax", "contents": "{syntax ${1:mode}}\n$0\n{/syntax}" },
+		{ "trigger": "l", "contents": "{l}$0" },
+		{ "trigger": "r", "contents": "{r}$0" },
+		{ "trigger": "contentType", "contents": "{contentType ${1:application/xml}}\n$0" },
+		{ "trigger": "status", "contents": "{status ${1:500}}\n$0" },
+		{ "trigger": "dump", "contents": "{dump \\$${1:var}}\n$0" },
+		{ "trigger": "debugbreak", "contents": "{debugbreak \\$${1:cond}}\n$0" },
+
+		// Default Helpers
+		// String modification
+		{ "trigger": "|truncate", "contents": "|truncate:${1:length}${2:,'${3:append}'}" },
+		{ "trigger": "|substr", "contents": "|substr:${1:offset}${2:,${3:length}}" },
+		{ "trigger": "|trim", "contents": "|trim${1::'${2:charset}'}" },
+		"|striptags",
+		"|strip",
+		{ "trigger": "|webalize", "contents": "|webalize${1::'${2:charlist}'${3:,${4:lower}}}" },
+		"|toAscii",
+		{ "trigger": "|indent", "contents": "|indent${1::${2:level}${3:,'${4:char}'}}" },
+		{ "trigger": "|replace", "contents": "|replace:'${1:search}'${2:,'${3:replace}'}" },
+		{ "trigger": "|replaceRE", "contents": "|replaceRE:'${1:pattern}'${2:,'${3:replace}'}" },
+		{ "trigger": "|padLeft", "contents": "|padLeft:${1:length}${2:,'${3:pad}'}" },
+		{ "trigger": "|padRight", "contents": "|padRight:${1:length}${2:,'${3:pad}'}" },
+		{ "trigger": "|repeat", "contents": "|repeat:${1:count}" },
+		{ "trigger": "|implode", "contents": "|implode:'${1:glue}'" },
+		"|nl2br",
+		// Letter casing
+		"|lower",
+		"|upper",
+		"|firstUpper",
+		"|capitalize",
+		// Formatting
+		{ "trigger": "|date", "contents": "|date:'${1:format}'" },
+		{ "trigger": "|number", "contents": "|number${1::${2:decimals}${3:,'${4:decPoint}'${5:,'${6:thousandsSep}'}}}" },
+		{ "trigger": "|bytes", "contents": "|bytes${1::${2:precision}}" },
+		// Other
+		{ "trigger": "|dataStream", "contents": "|dataStream${1::${2:mimetype}}" },
+		"|url",
+		"|length",
+		"|null"
+	]
+}
