@@ -2,7 +2,7 @@
 	"name": "latte",
 	"displayName": "Nette Latte + Neon",
 	"description": "Nette Latte + Neon support for VS Code",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"publisher": "Kasik96",
 	"engines": {
 		"vscode": "^0.10.1"
@@ -12,7 +12,7 @@
 		"Languages"
 	],
 	"galleryBanner": {
-		"color": "#EA7D28",
+		"color": "#3484D3",
 		"theme": "light"
 	},
 	"bugs": {
