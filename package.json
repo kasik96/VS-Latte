@@ -1,8 +1,8 @@
 {
 	"name": "latte",
-	"displayName": "Latte Language",
-	"description": "Latte language support for VS Code",
-	"version": "0.0.1",
+	"displayName": "Nette Latte + Neon",
+	"description": "Nette Latte + Neon support for VS Code",
+	"version": "0.0.2",
 	"publisher": "Kasik96",
 	"engines": {
 		"vscode": "^0.10.1"
@@ -16,13 +16,13 @@
 		"theme": "light"
 	},
 	"bugs": {
-		"url": "https://github.com/kasik96/Swift-VS-Code/issues",
+		"url": "https://github.com/kasik96/VS-Latte/issues",
 		"email": "kasemartin@icloud.com"
 	},
-	"homepage": "https://github.com/kasik96/Swift-VS-Code",
+	"homepage": "https://github.com/kasik96/VS-Latte",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/kasik96/Swift-VS-Code"
+		"url": "https://github.com/kasik96/VS-Latte"
 	},
 	"contributes": {
 		"languages": [{
@@ -30,11 +30,20 @@
 			"aliases": ["Latte", "latte"],
 			"extensions": [".latte"],
 			"configuration": "./latte.configuration.json"
+		},{
+			"id": "neon",
+			"aliases": ["Neon", "neon"],
+			"extensions": [".neon"],
+			"configuration": "./neon.configuration.json"
 		}],
 		"grammars": [{
 			"language": "latte",
 			"scopeName": "source.latte",
 			"path": "./syntaxes/latte.tmLanguage"
+		},{
+			"language": "neon",
+			"scopeName": "source.neon",
+			"path": "./syntaxes/neon.tmLanguage"
 		}],
 		"snippets": [
 			{

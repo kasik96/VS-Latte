@@ -1,49 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict> 
+<dict>
 	<key>fileTypes</key>
 	<array>
-		<string>phtml</string>
 		<string>latte</string>
 	</array>
 	<key>name</key>
 	<string>Latte</string>
-	<key>scopeName</key>
-	<string>source.latte</string>
 	<key>patterns</key>
 	<array>
-
-		<dict> 
+		<dict>
 			<key>begin</key>
 			<string>\{\*</string>
-			<key>captures</key>
-			<dict>
-				<key>0</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.comment.latte</string>
-				</dict>
-			</dict>
 			<key>end</key>
 			<string>\*\}</string>
 			<key>name</key>
 			<string>comment.block.latte</string>
-			<key>patterns</key>
-			<array>
-				<dict>  
-					<key>match</key>
-					<string>\@(author|param|copyright|package|see|license)</string>
-					<key>name</key>
-					<string>keyword.other.phpdoc</string>
-				</dict>
-				<dict> 
-					<key>include</key>
-					<string>#variables</string>
-				</dict>
-			</array>
 		</dict>
-		<dict>  
+		<dict>
 			<key>begin</key>
 			<string>\{\{?(?!\s)</string>
 			<key>beginCaptures</key>
@@ -51,7 +26,7 @@
 				<key>0</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.definition.tag.begin.latte</string>
+					<string>tag.begin.latte</string>
 				</dict>
 			</dict>
 			<key>end</key>
@@ -61,129 +36,111 @@
 				<key>0</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.definition.tag.end.latte</string>
+					<string>tag.end.latte</string>
 				</dict>
 			</dict>
 			<key>name</key>
 			<string>source.latte</string>
 			<key>patterns</key>
 			<array>
-
 				<dict>
 					<key>match</key>
 					<string>(?&lt;=\{)(\![^}]*)</string>
 					<key>name</key>
-					<string>keyword.unescaped.latte</string>
-				</dict>
-				<dict> 
-					<key>include</key>
-					<string>#numbers</string>
+					<string>keyword.latte</string>
 				</dict>
 				<dict>
-					<key>include</key>
-					<string>#variables</string>
-				</dict>
-				<dict>  
 					<key>match</key>
-					<string>(?&lt;=\{)/?(block|foreach|form|ifset|elseif|if|else|snippet|ifset|ifCurrent|for|foreach|while|first|last|sep|capture|cache|syntaxblock|syntax|define)\s*</string>
+					<string>\b((0(x|X)[0-9a-fA-F]*)|(([0-9]+\.?[0-9]*)|(\.[0-9]+))((e|E)(\+|-)?[0-9]+)?)\b</string>
 					<key>name</key>
-					<string>keyword.control.latte</string>
+					<string>constant.numeric.latte</string>
 				</dict>
-				<dict> 
+				<dict>
 					<key>match</key>
-					<string>(?&lt;=\{)(var|link|plink|control|\!|label|input|default|include|l|r|use|contentType|status|_|layout|extends|dump|debugbreak)\s*</string>
+					<string>\$\$?[a-zA-Z_0-9]+\s*</string>
+					<key>name</key>
+					<string>variable.other.latte</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>true|TRUE|True|false|FALSE|False|null|NULL|Null</string>
+					<key>name</key>
+					<string>constant.language.latte</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>(?&lt;=\{)(_|breakIf|continueIf|contentType|control|debugbreak|default|dump|elseifset|elseif|else|extends|includeblock|include|inputError|input|layout|link|php|plink|r|status|use|var)\s*</string>
+					<key>name</key>
+					<string>keyword.control.single.latte</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>(?&lt;=\{)/?(block|cache|capture|define|first|foreach|form|for|ifset|ifCurrent|if|label|last|l|sep|snippet|syntax|while)\s*</string>
+					<key>name</key>
+					<string>keyword.control.pair.latte</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>(?&lt;=\s)(\!|/|===|as|and|AND|And|&amp;&amp;|or|OR|Or|\|\||\+\+|\-\-|==|&lt;=&gt;|&gt;=|&lt;=)\s?</string>
 					<key>name</key>
 					<string>keyword.operator.latte</string>
 				</dict>
-				<dict> 
+				<dict>
 					<key>match</key>
-					<string>\!|and|or|===|!==|&gt;=|&lt;=|&lt;&gt;|&gt;|&lt;|==|!=|true|false|\+|\-|\*|/|%</string>
+					<string>-&gt;</string>
 					<key>name</key>
-					<string>keyword.operator</string>
+					<string>keyword.operator.latte</string>
 				</dict>
-				<dict> 
-					<key>match</key>
-					<string>widget</string>
-					<key>name</key>
-					<string>invalid.deprecated</string>
-				</dict>
-				<dict> 
-					<key>match</key>
-					<string>.*?(\|)(\w+)(?:\:([^\|\}]+))*</string>
+				<dict>
 					<key>captures</key>
 					<dict>
 						<key>1</key>
 						<dict>
 							<key>name</key>
-							<string>keyword.helper.separator.latte</string>
+							<string>keyword.other.latte</string>
 						</dict>
 						<key>2</key>
 						<dict>
 							<key>name</key>
-							<string>keyword.helper.name.latte</string>
+							<string>keyword.other.latte</string>
 						</dict>
 					</dict>
+					<key>match</key>
+					<string>.*?(\|)(\w+)(?:\:([^\|\}]+))*</string>
 				</dict>
-				<dict>  
+				<dict>
 					<key>include</key>
 					<string>#strings</string>
 				</dict>
-				<dict> 
-					<key>match</key>
-					<string>[a-zA-Z_:]+|\s</string>
-					<key>name</key>
-					<string>source.latte</string>
-				</dict>
 			</array>
 		</dict>
-
-		<dict>  
+		<dict>
 			<key>include</key>
 			<string>text.html.basic</string>
 		</dict>
 	</array>
-
 	<key>repository</key>
 	<dict>
-		<key>variables</key> 
-		<dict>
-			<key>match</key>
-			<string>\$\$?[a-zA-Z_0-9]+\s*</string>
-			<key>name</key>
-			<string>variable.other.global.latte</string>
-		</dict>
-
-		<key>numbers</key> 
-		<dict>
-			<key>match</key>
-			<string>\b((0(x|X)[0-9a-fA-F]*)|(([0-9]+\.?[0-9]*)|(\.[0-9]+))((e|E)(\+|-)?[0-9]+)?)\b</string>
-			<key>name</key>
-			<string>constant.numeric.latte</string>
-		</dict>
-
-		<key>strings</key> 
+		<key>strings</key>
 		<dict>
 			<key>patterns</key>
 			<array>
 				<dict>
-					<key>begin</key>
-					<string>'</string>
-					<key>end</key>
-					<string>'</string>
+					<key>match</key>
+					<string>(')(.*)(')</string>
 					<key>name</key>
 					<string>string.quoted.single.latte</string>
 				</dict>
 				<dict>
-					<key>begin</key>
-					<string>"</string>
-					<key>end</key>
-					<string>"</string>
+					<key>match</key>
+					<string>(")(.*)(")</string>
 					<key>name</key>
 					<string>string.quoted.double.latte</string>
 				</dict>
 			</array>
 		</dict>
 	</dict>
-
+	<key>scopeName</key>
+	<string>source.latte</string>
 </dict>
 </plist>

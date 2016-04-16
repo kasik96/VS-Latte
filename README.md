@@ -1,7 +1,7 @@
 # README
-## This is the README for language extension Latte for VS Code
+## This is the README for language extension Nette Latte + Neon for VS Code
 
-* This extension integrates the Latte Language extension from Nette PHP Framework into Visual Studio Code.
+* This extension integrates the Latte and Neon Language extension from Nette PHP Framework into Visual Studio Code.
 * Support Colorization and Grammar.
 * Support Snippets.
 
@@ -10,6 +10,6 @@
 * https://github.com/kasik96/VS-Latte
 
 ### Thanks to
-* [Nette package for Sublime Text 2](https://github.com/Michal-Mikolas/Nette-package-for-Sublime-Text-2)
+* [Nette-Latte-Neon-for-Sublime-Text-3](https://github.com/FilipStryk/Nette-Latte-Neon-for-Sublime-Text-3)
 
 ** Made with ♥ and VSCode. Enjoy! **
