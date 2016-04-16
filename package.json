@@ -26,24 +26,24 @@
 	},
 	"contributes": {
 		"languages": [{
-			"id": "latte",
-			"aliases": ["Latte", "latte"],
-			"extensions": [".latte"],
-			"configuration": "./latte.configuration.json"
-		},{
 			"id": "neon",
 			"aliases": ["Neon", "neon"],
 			"extensions": [".neon"],
 			"configuration": "./neon.configuration.json"
+		},{
+			"id": "latte",
+			"aliases": ["Latte", "latte"],
+			"extensions": [".latte"],
+			"configuration": "./latte.configuration.json"
 		}],
 		"grammars": [{
-			"language": "latte",
-			"scopeName": "source.latte",
-			"path": "./syntaxes/latte.tmLanguage"
-		},{
 			"language": "neon",
 			"scopeName": "source.neon",
 			"path": "./syntaxes/neon.tmLanguage"
+		},{
+			"language": "latte",
+			"scopeName": "source.latte",
+			"path": "./syntaxes/latte.tmLanguage"
 		}],
 		"snippets": [
 			{
