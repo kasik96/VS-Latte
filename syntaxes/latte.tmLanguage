@@ -127,13 +127,13 @@
 			<array>
 				<dict>
 					<key>match</key>
-					<string>(')(.*)(')</string>
+					<string>(')(.*?)(')</string>
 					<key>name</key>
 					<string>string.quoted.single.latte</string>
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>(")(.*)(")</string>
+					<string>(")(.*?)(")</string>
 					<key>name</key>
 					<string>string.quoted.double.latte</string>
 				</dict>
