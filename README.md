@@ -5,7 +5,7 @@
 * Support Snippets.
 
 ### Bugs and Ideas
-* If you found bug or you have an idea, let me now on GitHub :)
+* If you found a bug or you have an idea, let me know on GitHub :)
 * https://github.com/kasik96/VS-Latte
 
 ### Thanks to
