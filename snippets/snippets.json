@@ -99,6 +99,22 @@
 		"prefix": "form",
 		"body": "{form ${1:foo}}\n$0\n{/form}"
 	},
+	"formPrint": {
+		"prefix": "formPrint",
+		"body": "{formPrint $(1:foo)}"
+	},
+	"varPrint": {
+		"prefix": "varPrint",
+		"body": "{varPrint $(1:foo)}"
+	},
+	"varType": {
+		"prefix": "varType",
+		"body": "{varType $(1:foo)}"
+	},
+	"templatePrint": {
+		"prefix": "templatePrint",
+		"body": "{templatePrint $(1:foo)}"
+	},
 	"label": {
 		"prefix": "label",
 		"body": "{label ${1:foo} /}\n"
