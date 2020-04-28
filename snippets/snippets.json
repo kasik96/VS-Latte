@@ -1,3 +1,4 @@
+{
 	"block": {
 		"prefix": "block",
 		"body": "{block ${1:content}}\n$0\n{/block}"
