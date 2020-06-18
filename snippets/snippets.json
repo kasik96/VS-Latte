@@ -2,7 +2,11 @@
 	"block": {
 		"prefix": "block",
 		"body": "{block ${1:content}}\n$0\n{/block}"
-	},
+    	},
+    	"sandbox": {
+        	"prefix": "sandbox",
+        	"body": "{sandbox '${1:untrusted_example.latte}'}\n"
+    	},
 	"snippet": {
 		"prefix": "snippet",
 		"body": "{snippet ${1:content}}\n$0\n{/snippet}"
@@ -93,27 +97,35 @@
 	},
 	"control": {
 		"prefix": "control",
-		"body": "{control ${1:foo}}\n$0"
+		"body": "{control ${1:exampleSignForm}}\n$0"
 	},
 	"form": {
 		"prefix": "form",
-		"body": "{form ${1:foo}}\n$0\n{/form}"
+		"body": "{form ${1:exampleSignForm}}\n$0\n{/form}"
 	},
 	"formPrint": {
 		"prefix": "formPrint",
-		"body": "{formPrint $(1:foo)}"
+		"body": "{formPrint ${1:exampleSignForm}}"
 	},
 	"varPrint": {
 		"prefix": "varPrint",
-		"body": "{varPrint $(1:foo)}"
-	},
+		"body": "{varPrint ${1:example}}\n"
+    	},
+    	"var": {
+        	"prefix": "var",
+        	"body": "{var \\$${1:name} = 'John Smish'}\n"
+    	},
 	"varType": {
 		"prefix": "varType",
-		"body": "{varType $(1:foo)}"
-	},
+		"body": "{varType ${0:string} \\$${1:lang}}\n"
+    	},
+    	"templateType": {
+        	"prefix": "templateType",
+        	"body": "{templateType ${1:App\\Presenter\\ExampleDefaultTemplate}}\n"
+    	},
 	"templatePrint": {
 		"prefix": "templatePrint",
-		"body": "{templatePrint $(1:foo)}"
+		"body": "{templatePrint ${1:App\\Presenter\\ExampleDefaultTemplate}}\n"
 	},
 	"label": {
 		"prefix": "label",
@@ -121,7 +133,7 @@
 	},
 	"input": {
 		"prefix": "input",
-		"body": "{input ${1:foo}}\n$0"
+		"body": "{input ${1:foo}}\n"
 	},
 	"syntax": {
 		"prefix": "syntax",
@@ -291,6 +303,6 @@
 	},
 	"n:href": {
 		"prefix": "n:href",
-		"body": "n:href=\"${0:\\presenter}:${1:\\action} ${2:\\$arg}\""
+		"body": "n:href=\"${0:Presenter}:${1:action} ${2:\\$arg}\""
 	}
 }
