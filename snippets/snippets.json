@@ -2,11 +2,23 @@
 	"block": {
 		"prefix": "block",
 		"body": "{block ${1:content}}\n$0\n{/block}"
-    	},
-    	"sandbox": {
-        	"prefix": "sandbox",
-        	"body": "{sandbox '${1:untrusted_example.latte}'}\n"
-    	},
+	},
+	"block local": {
+		"prefix": "block",
+		"body": "{block local ${1:content}}\n$0\n{/block}"
+	},
+	"sandbox": {
+		"prefix": "sandbox",
+		"body": "{sandbox '${1:untrusted_example.latte}'}\n"
+	},
+	"try": {
+		"prefix": "try",
+		"body": "{try}\n$0\n{/try}"
+	},
+	"embed": {
+		"prefix": "embed",
+		"body": "{embed '${1:template.latte}'}\n$0\n{/embed}"
+	},
 	"snippet": {
 		"prefix": "snippet",
 		"body": "{snippet ${1:content}}\n$0\n{/snippet}"
@@ -35,13 +47,21 @@
 		"prefix": "include",
 		"body": "{include #${1:content}}\n$0"
 	},
-	"includeblock": {
-		"prefix": "includeblock",
-		"body": "{includeblock '${1:file.latte}'}\n$0"
+	"include block": {
+		"prefix": "include",
+		"body": "{include block '${1:foo}'}\n$0"
+	},
+	"include file": {
+		"prefix": "include",
+		"body": "{include file '${1:foo}'}\n$0"
+	},
+	"include from": {
+		"prefix": "include",
+		"body": "{include block from '${1:template.latte}'}\n$0"
 	},
 	"foreach": {
 		"prefix": "foreach",
-		"body": "{foreach \\$$1s as \\$$1}\n$0\n{/foreach}"
+		"body": "{foreach \\$$1 as \\$$1}\n$0\n{/foreach}"
 	},
 	"while": {
 		"prefix": "while",
@@ -67,6 +87,14 @@
 		"prefix": "continueIf",
 		"body": "{continueIf \\$${1:foo}}$0"
 	},
+	"skipIf": {
+		"prefix": "skipIf",
+		"body": "{skipIf (\\$${1:age < 18})}$0"
+	},
+	"switch": {
+		"prefix": "switch",
+		"body": "{switch $${1:example}}\n$0 {case $$1::NEW}<b>new item</b>\n$0 {case $$1::SOLD, $$1::UNKNOWN}<b>not available</b>\n$0{/switch}"
+	},
 	"breakIf": {
 		"prefix": "breakIf",
 		"body": "{breakIf \\$${1:foo}}$0"
@@ -78,6 +106,10 @@
 	"ifset": {
 		"prefix": "ifset",
 		"body": "{ifset \\$${1:foo}}\n$0\n{/ifset}"
+	},
+	"ifchanged": {
+		"prefix": "ifchanged",
+		"body": "{ifchanged $${1:foo[0]}}\n$0\n{/ifchanged}"
 	},
 	"cache": {
 		"prefix": "cache",
@@ -110,19 +142,19 @@
 	"varPrint": {
 		"prefix": "varPrint",
 		"body": "{varPrint ${1:example}}\n"
-    	},
-    	"var": {
-        	"prefix": "var",
-        	"body": "{var \\$${1:name} = 'John Smish'}\n"
-    	},
+	},
+	"var": {
+		"prefix": "var",
+		"body": "{var \\$${1:name} = 'John Smish'}\n"
+	},
 	"varType": {
 		"prefix": "varType",
 		"body": "{varType ${0:string} \\$${1:lang}}\n"
-    	},
-    	"templateType": {
-        	"prefix": "templateType",
-        	"body": "{templateType ${1:App\\Presenter\\ExampleDefaultTemplate}}\n"
-    	},
+	},
+	"templateType": {
+		"prefix": "templateType",
+		"body": "{templateType ${1:App\\Presenter\\ExampleDefaultTemplate}}\n"
+	},
 	"templatePrint": {
 		"prefix": "templatePrint",
 		"body": "{templatePrint ${1:App\\Presenter\\ExampleDefaultTemplate}}\n"
@@ -166,6 +198,10 @@
 	"debugbreak": {
 		"prefix": "debugbreak",
 		"body": "{debugbreak \\$${1:cond}}\n$0"
+	},
+	"clamp": {
+		"prefix": "clamp",
+		"body": "{=clamp($${1:level, 0, 255})}"
 	},
 	// Default Helpers
 	// String modification
@@ -276,6 +312,18 @@
 		"prefix": "|null",
 		"body": "|null"
 	},
+	"|sort": {
+		"prefix": "|sort",
+		"body": "|sort",
+	},
+	"|reverse": {
+		"prefix": "|reverse",
+		"body": "|reverse",
+	},
+	"|clamp": {
+		"prefix": "|clamp",
+		"body": "|clamp: (${1:0, 255})"
+	},
 	// HTML helpers
 	"n:class": {
 		"prefix": "n:class",
@@ -288,6 +336,10 @@
 	"n:ifcontent": {
 		"prefix": "n:ifcontent",
 		"body": "n:ifcontent"
+	},
+	"n:ifchanged": {
+		"prefix": "n:ifchanged",
+		"body": "n:ifchanged",
 	},
 	"n:foreach": {
 		"prefix": "n:foreach",
