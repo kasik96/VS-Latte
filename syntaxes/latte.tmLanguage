@@ -69,13 +69,13 @@
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>(?&lt;=\{)(_|breakIf|case|continueIf|contentType|control|debugbreak|default|dump|elseifset|elseif|else|extends|includeblock|include|inputError|input|layout|link|php|plink|r|status|use|var)\s*</string>
+					<string>(?&lt;=\{)(_|=|breakIf|case|continueIf|contentType|control|debugbreak|default|bdump|dump|elseifset|elseif|else|extends|formPrint|include|import|inputError|input|layout|link|php|plink|r|status|templateType|templatePrint|use|varType|varPrint|var)\s*</string>
 					<key>name</key>
 					<string>keyword.control.single.latte</string>
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>(?&lt;=\{)/?(block|cache|capture|define|first|foreach|form|for|ifset|ifCurrent|if|label|last|l|sep|snippetArea|snippet|switch|syntax|while)\s*</string>
+					<string>(?&lt;=\{)/?(block|cache|capture|define|embed|first|foreach|form|for|ifset|ifCurrent|ifchanged|if|label|last|l|sandbox|sep|snippetArea|snippet|switch|syntax|try|while)\s*</string>
 					<key>name</key>
 					<string>keyword.control.pair.latte</string>
 				</dict>
