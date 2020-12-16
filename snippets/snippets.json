@@ -356,5 +356,9 @@
 	"n:href": {
 		"prefix": "n:href",
 		"body": "n:href=\"${0:Presenter}:${1:action} ${2:\\$arg}\""
-	}
+	},
+    	"n:snippet": {
+		"prefix": "n:snippet",
+		"body": "n:snippet=\"${0:content}\""
+	},
 }
