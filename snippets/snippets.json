@@ -1,364 +1,364 @@
 {
-	"block": {
-		"prefix": "block",
-		"body": "{block ${1:content}}\n$0\n{/block}"
-	},
-	"block local": {
-		"prefix": "block",
-		"body": "{block local ${1:content}}\n$0\n{/block}"
-	},
-	"sandbox": {
-		"prefix": "sandbox",
-		"body": "{sandbox '${1:untrusted_example.latte}'}\n"
-	},
-	"try": {
-		"prefix": "try",
-		"body": "{try}\n$0\n{/try}"
-	},
-	"embed": {
-		"prefix": "embed",
-		"body": "{embed '${1:template.latte}'}\n$0\n{/embed}"
-	},
-	"snippet": {
-		"prefix": "snippet",
-		"body": "{snippet ${1:content}}\n$0\n{/snippet}"
-	},
-	"import": {
-		"prefix": "import",
-		"body": "{import '${1:../@layout.latte}'}\n$0"
-	},
-	"layout": {
-		"prefix": "layout",
-		"body": "{layout '${1:../@layout.latte}'}\n$0"
-	},
-	"extends": {
-		"prefix": "extends",
-		"body": "{extends '${1:../@layout.latte}'}\n$0"
-	},
-	"capture": {
-		"prefix": "capture",
-		"body": "{capture \\$${1:var}}\n$0\n{/capture}"
-	},
-	"define": {
-		"prefix": "define",
-		"body": "{define ${1:content}}\n$0\n{/define}"
-	},
-	"include": {
-		"prefix": "include",
-		"body": "{include #${1:content}}\n$0"
-	},
-	"include block": {
-		"prefix": "include",
-		"body": "{include block '${1:foo}'}\n$0"
-	},
-	"include file": {
-		"prefix": "include",
-		"body": "{include file '${1:foo}'}\n$0"
-	},
-	"include from": {
-		"prefix": "include",
-		"body": "{include block from '${1:template.latte}'}\n$0"
-	},
-	"foreach": {
-		"prefix": "foreach",
-		"body": "{foreach \\$$1 as \\$$1}\n$0\n{/foreach}"
-	},
-	"while": {
-		"prefix": "while",
-		"body": "{while \\$$1 = \\$$1s->fetch()}\n$0\n{/while}"
-	},
-	"for": {
-		"prefix": "for",
-		"body": "{for \\$${1:i} = 0; \\$${1:i} < ${2:10}; \\$${1:i}++}\n$0\n{/for}"
-	},
-	"first": {
-		"prefix": "first",
-		"body": "{first}\n$0\n{/first}"
-	},
-	"last": {
-		"prefix": "last",
-		"body": "{last}\n$0\n{/last}"
-	},
-	"sep": {
-		"prefix": "sep",
-		"body": "{sep}\n$0\n{/sep}"
-	},
-	"continueIf": {
-		"prefix": "continueIf",
-		"body": "{continueIf \\$${1:foo}}$0"
-	},
-	"skipIf": {
-		"prefix": "skipIf",
-		"body": "{skipIf (\\$${1:age < 18})}$0"
-	},
-	"switch": {
-		"prefix": "switch",
-		"body": "{switch $${1:example}}\n$0 {case $$1::NEW}<b>new item</b>\n$0 {case $$1::SOLD, $$1::UNKNOWN}<b>not available</b>\n$0{/switch}"
-	},
-	"breakIf": {
-		"prefix": "breakIf",
-		"body": "{breakIf \\$${1:foo}}$0"
-	},
-	"if": {
-		"prefix": "if",
-		"body": "{if \\$${1:foo}}\n$0\n{/if}"
-	},
-	"ifset": {
-		"prefix": "ifset",
-		"body": "{ifset \\$${1:foo}}\n$0\n{/ifset}"
-	},
-	"ifchanged": {
-		"prefix": "ifchanged",
-		"body": "{ifchanged $${1:foo[0]}}\n$0\n{/ifchanged}"
-	},
-	"cache": {
-		"prefix": "cache",
-		"body": "{cache \\$${1:var}}\n$0\n{/cache}"
-	},
-	"default": {
-		"prefix": "default",
-		"body": "{default \\$${1:foo = ''}}$0"
-	},
-	"link": {
-		"prefix": "link",
-		"body": "{link ${1:Default}}\n$0"
-	},
-	"plink": {
-		"prefix": "plink",
-		"body": "{plink ${1:Default}}\n$0"
-	},
-	"control": {
-		"prefix": "control",
-		"body": "{control ${1:exampleSignForm}}\n$0"
-	},
-	"form": {
-		"prefix": "form",
-		"body": "{form ${1:exampleSignForm}}\n$0\n{/form}"
-	},
-	"formPrint": {
-		"prefix": "formPrint",
-		"body": "{formPrint ${1:exampleSignForm}}"
-	},
-	"varPrint": {
-		"prefix": "varPrint",
-		"body": "{varPrint ${1:example}}\n"
-	},
-	"var": {
-		"prefix": "var",
-		"body": "{var \\$${1:name} = 'John Smish'}\n"
-	},
-	"varType": {
-		"prefix": "varType",
-		"body": "{varType ${0:string} \\$${1:lang}}\n"
-	},
-	"templateType": {
-		"prefix": "templateType",
-		"body": "{templateType ${1:App\\Presenter\\ExampleDefaultTemplate}}\n"
-	},
-	"templatePrint": {
-		"prefix": "templatePrint",
-		"body": "{templatePrint ${1:App\\Presenter\\ExampleDefaultTemplate}}\n"
-	},
-	"label": {
-		"prefix": "label",
-		"body": "{label ${1:foo} /}\n"
-	},
-	"input": {
-		"prefix": "input",
-		"body": "{input ${1:foo}}\n"
-	},
-	"syntax": {
-		"prefix": "syntax",
-		"body": "{syntax ${1:mode}}\n$0\n{/syntax}"
-	},
-	"l": {
-		"prefix": "l",
-		"body": "{l}$0"
-	},
-	"r": {
-		"prefix": "r",
-		"body": "{r}$0"
-	},
-	"contentType": {
-		"prefix": "contentType",
-		"body": "{contentType ${1:application/xml}}\n$0"
-	},
-	"status": {
-		"prefix": "status",
-		"body": "{status ${1:500}}\n$0"
-	},
-	"dump": {
-		"prefix": "dump",
-		"body": "{dump \\$${1:var}}\n$0"
-	},
-	"php": {
-		"prefix": "php",
-		"body": "{php \\$${1:var}}\n$0"
-	},
-	"debugbreak": {
-		"prefix": "debugbreak",
-		"body": "{debugbreak \\$${1:cond}}\n$0"
-	},
-	"clamp": {
-		"prefix": "clamp",
-		"body": "{=clamp($${1:level, 0, 255})}"
-	},
-	// Default Helpers
-	// String modification
-	"|truncate": {
-		"prefix": "|truncate",
-		"body": "|truncate:${1:length}${2:,'${3:append}'}"
-	},
-	"|substr": {
-		"prefix": "|substr",
-		"body": "|substr:${1:offset}${2:,${3:length}}"
-	},
-	"|trim": {
-		"prefix": "|trim",
-		"body": "|trim${1::'${2:charset}'}"
-	},
-	"|striptags": {
-		"prefix": "|striptags",
-		"body": "|striptags"
-	},
-	"|strip": {
-		"prefix": "|strip",
-		"body": "|strip"
-	},
-	"|webalize": {
-		"prefix": "|webalize",
-		"body": "|webalize${1::'${2:charlist}'${3:,${4:lower}}}"
-	},
-	"|toAscii": {
-		"prefix": "|toAscii",
-		"body": "|toAscii"
-	},
-	"|indent": {
-		"prefix": "|indent",
-		"body": "|indent${1::${2:level}${3:,'${4:char}'}}"
-	},
-	"|replace": {
-		"prefix": "|replace",
-		"body": "|replace:'${1:search}'${2:,'${3:replace}'}"
-	},
-	"|replaceRE": {
-		"prefix": "|replaceRE",
-		"body": "|replaceRE:'${1:pattern}'${2:,'${3:replace}'}"
-	},
-	"|padLeft": {
-		"prefix": "|padLeft",
-		"body": "|padLeft:${1:length}${2:,'${3:pad}'}"
-	},
-	"|padRight": {
-		"prefix": "|padRight",
-		"body": "|padRight:${1:length}${2:,'${3:pad}'}"
-	},
-	"|repeat": {
-		"prefix": "|repeat",
-		"body": "|repeat:${1:count}"
-	},
-	"|implode": {
-		"prefix": "|implode",
-		"body": "|implode:'${1:glue}'"
-	},
-	"|nl2br": {
-		"prefix": "|nl2br",
-		"body": "|nl2br"
-	},
-	// Letter casing
-	"|lower": {
-		"prefix": "|lower",
-		"body": "|lower"
-	},
-	"|upper": {
-		"prefix": "|upper",
-		"body": "|upper"
-	},
-	"|firstUpper": {
-		"prefix": "|firstUpper",
-		"body": "|firstUpper"
-	},
-	"|capitalize": {
-		"prefix": "|capitalize",
-		"body": "|capitalize"
-	},
-	// Formatting
-	"|date": {
-		"prefix": "|date",
-		"body": "|date:'${1:format}'"
-	},
-	"|number": {
-		"prefix": "|number",
-		"body": "|number${1::${2:decimals}${3:,'${4:decPoint}'${5:,'${6:thousandsSep}'}}}"
-	},
-	"|bytes": {
-		"prefix": "|bytes",
-		"body": "|bytes${1::${2:precision}}"
-	},
-	// Other
-	"|dataStream": {
-		"prefix": "|dataStream",
-		"body": "|dataStream${1::${2:mimetype}}"
-	},
-	"|url": {
-		"prefix": "|url",
-		"body": "|url"
-	},
-	"|length": {
-		"prefix": "|length",
-		"body": "|length"
-	},
-	"|null": {
-		"prefix": "|null",
-		"body": "|null"
-	},
-	"|sort": {
-		"prefix": "|sort",
-		"body": "|sort",
-	},
-	"|reverse": {
-		"prefix": "|reverse",
-		"body": "|reverse",
-	},
-	"|clamp": {
-		"prefix": "|clamp",
-		"body": "|clamp: (${1:0, 255})"
-	},
-	// HTML helpers
-	"n:class": {
-		"prefix": "n:class",
-		"body": "n:class=\"${0:condition} ? ${1:active}\""
-	},
-	"n:attr": {
-		"prefix": "n:attr",
-		"body": "n:attr=\"${0:value} => ${1:\\$value}\""
-	},
-	"n:ifcontent": {
-		"prefix": "n:ifcontent",
-		"body": "n:ifcontent"
-	},
-	"n:ifchanged": {
-		"prefix": "n:ifchanged",
-		"body": "n:ifchanged",
-	},
-	"n:foreach": {
-		"prefix": "n:foreach",
-		"body": "n:foreach=\"${0:\\$items} as ${1:\\$item}\""
-	},
-	"n:inner-foreach": {
-		"prefix": "n:inner-foreach",
-		"body": "n:inner-foreach=\"${0:\\$items} as ${1:\\$item}\""
-	},
-	"n:tag-if": {
-		"prefix": "n:inner-foreach",
-		"body": "n:tag-if=\"${0:\\$url}\""
-	},
-	"n:href": {
-		"prefix": "n:href",
-		"body": "n:href=\"${0:Presenter}:${1:action} ${2:\\$arg}\""
-	},
-    	"n:snippet": {
-		"prefix": "n:snippet",
-		"body": "n:snippet=\"${0:content}\""
-	},
+  "block": {
+    "prefix": "block",
+    "body": "{block ${1:content}}\n$0\n{/block}"
+  },
+  "block local": {
+    "prefix": "block",
+    "body": "{block local ${1:content}}\n$0\n{/block}"
+  },
+  "sandbox": {
+    "prefix": "sandbox",
+    "body": "{sandbox '${1:untrusted_example.latte}'}\n"
+  },
+  "try": {
+    "prefix": "try",
+    "body": "{try}\n$0\n{/try}"
+  },
+  "embed": {
+    "prefix": "embed",
+    "body": "{embed '${1:template.latte}'}\n$0\n{/embed}"
+  },
+  "snippet": {
+    "prefix": "snippet",
+    "body": "{snippet ${1:content}}\n$0\n{/snippet}"
+  },
+  "import": {
+    "prefix": "import",
+    "body": "{import '${1:../@layout.latte}'}\n$0"
+  },
+  "layout": {
+    "prefix": "layout",
+    "body": "{layout '${1:../@layout.latte}'}\n$0"
+  },
+  "extends": {
+    "prefix": "extends",
+    "body": "{extends '${1:../@layout.latte}'}\n$0"
+  },
+  "capture": {
+    "prefix": "capture",
+    "body": "{capture \\$${1:var}}\n$0\n{/capture}"
+  },
+  "define": {
+    "prefix": "define",
+    "body": "{define ${1:content}}\n$0\n{/define}"
+  },
+  "include": {
+    "prefix": "include",
+    "body": "{include #${1:content}}\n$0"
+  },
+  "include block": {
+    "prefix": "include",
+    "body": "{include block '${1:foo}'}\n$0"
+  },
+  "include file": {
+    "prefix": "include",
+    "body": "{include file '${1:foo}'}\n$0"
+  },
+  "include from": {
+    "prefix": "include",
+    "body": "{include block from '${1:template.latte}'}\n$0"
+  },
+  "foreach": {
+    "prefix": "foreach",
+    "body": "{foreach \\$$1 as \\$$1}\n$0\n{/foreach}"
+  },
+  "while": {
+    "prefix": "while",
+    "body": "{while \\$$1 = \\$$1s->fetch()}\n$0\n{/while}"
+  },
+  "for": {
+    "prefix": "for",
+    "body": "{for \\$${1:i} = 0; \\$${1:i} < ${2:10}; \\$${1:i}++}\n$0\n{/for}"
+  },
+  "first": {
+    "prefix": "first",
+    "body": "{first}\n$0\n{/first}"
+  },
+  "last": {
+    "prefix": "last",
+    "body": "{last}\n$0\n{/last}"
+  },
+  "sep": {
+    "prefix": "sep",
+    "body": "{sep}\n$0\n{/sep}"
+  },
+  "continueIf": {
+    "prefix": "continueIf",
+    "body": "{continueIf \\$${1:foo}}$0"
+  },
+  "skipIf": {
+    "prefix": "skipIf",
+    "body": "{skipIf (\\$${1:age < 18})}$0"
+  },
+  "switch": {
+    "prefix": "switch",
+    "body": "{switch $${1:example}}\n$0 {case $$1::NEW}<b>new item</b>\n$0 {case $$1::SOLD, $$1::UNKNOWN}<b>not available</b>\n$0{/switch}"
+  },
+  "breakIf": {
+    "prefix": "breakIf",
+    "body": "{breakIf \\$${1:foo}}$0"
+  },
+  "if": {
+    "prefix": "if",
+    "body": "{if \\$${1:foo}}\n$0\n{/if}"
+  },
+  "ifset": {
+    "prefix": "ifset",
+    "body": "{ifset \\$${1:foo}}\n$0\n{/ifset}"
+  },
+  "ifchanged": {
+    "prefix": "ifchanged",
+    "body": "{ifchanged $${1:foo[0]}}\n$0\n{/ifchanged}"
+  },
+  "cache": {
+    "prefix": "cache",
+    "body": "{cache \\$${1:var}}\n$0\n{/cache}"
+  },
+  "default": {
+    "prefix": "default",
+    "body": "{default \\$${1:foo = ''}}$0"
+  },
+  "link": {
+    "prefix": "link",
+    "body": "{link ${1:Default}}\n$0"
+  },
+  "plink": {
+    "prefix": "plink",
+    "body": "{plink ${1:Default}}\n$0"
+  },
+  "control": {
+    "prefix": "control",
+    "body": "{control ${1:exampleSignForm}}\n$0"
+  },
+  "form": {
+    "prefix": "form",
+    "body": "{form ${1:exampleSignForm}}\n$0\n{/form}"
+  },
+  "formPrint": {
+    "prefix": "formPrint",
+    "body": "{formPrint ${1:exampleSignForm}}"
+  },
+  "varPrint": {
+    "prefix": "varPrint",
+    "body": "{varPrint ${1:example}}\n"
+  },
+  "var": {
+    "prefix": "var",
+    "body": "{var \\$${1:name} = 'John Smish'}\n"
+  },
+  "varType": {
+    "prefix": "varType",
+    "body": "{varType ${0:string} \\$${1:lang}}\n"
+  },
+  "templateType": {
+    "prefix": "templateType",
+    "body": "{templateType ${1:App\\Presenter\\ExampleDefaultTemplate}}\n"
+  },
+  "templatePrint": {
+    "prefix": "templatePrint",
+    "body": "{templatePrint ${1:App\\Presenter\\ExampleDefaultTemplate}}\n"
+  },
+  "label": {
+    "prefix": "label",
+    "body": "{label ${1:foo} /}\n"
+  },
+  "input": {
+    "prefix": "input",
+    "body": "{input ${1:foo}}\n"
+  },
+  "syntax": {
+    "prefix": "syntax",
+    "body": "{syntax ${1:mode}}\n$0\n{/syntax}"
+  },
+  "l": {
+    "prefix": "l",
+    "body": "{l}$0"
+  },
+  "r": {
+    "prefix": "r",
+    "body": "{r}$0"
+  },
+  "contentType": {
+    "prefix": "contentType",
+    "body": "{contentType ${1:application/xml}}\n$0"
+  },
+  "status": {
+    "prefix": "status",
+    "body": "{status ${1:500}}\n$0"
+  },
+  "dump": {
+    "prefix": "dump",
+    "body": "{dump \\$${1:var}}\n$0"
+  },
+  "php": {
+    "prefix": "php",
+    "body": "{php \\$${1:var}}\n$0"
+  },
+  "debugbreak": {
+    "prefix": "debugbreak",
+    "body": "{debugbreak \\$${1:cond}}\n$0"
+  },
+  "clamp": {
+    "prefix": "clamp",
+    "body": "{=clamp($${1:level, 0, 255})}"
+  },
+  // Default Helpers
+  // String modification
+  "|truncate": {
+    "prefix": "|truncate",
+    "body": "|truncate:${1:length}${2:,'${3:append}'}"
+  },
+  "|substr": {
+    "prefix": "|substr",
+    "body": "|substr:${1:offset}${2:,${3:length}}"
+  },
+  "|trim": {
+    "prefix": "|trim",
+    "body": "|trim${1::'${2:charset}'}"
+  },
+  "|striptags": {
+    "prefix": "|striptags",
+    "body": "|striptags"
+  },
+  "|strip": {
+    "prefix": "|strip",
+    "body": "|strip"
+  },
+  "|webalize": {
+    "prefix": "|webalize",
+    "body": "|webalize${1::'${2:charlist}'${3:,${4:lower}}}"
+  },
+  "|toAscii": {
+    "prefix": "|toAscii",
+    "body": "|toAscii"
+  },
+  "|indent": {
+    "prefix": "|indent",
+    "body": "|indent${1::${2:level}${3:,'${4:char}'}}"
+  },
+  "|replace": {
+    "prefix": "|replace",
+    "body": "|replace:'${1:search}'${2:,'${3:replace}'}"
+  },
+  "|replaceRE": {
+    "prefix": "|replaceRE",
+    "body": "|replaceRE:'${1:pattern}'${2:,'${3:replace}'}"
+  },
+  "|padLeft": {
+    "prefix": "|padLeft",
+    "body": "|padLeft:${1:length}${2:,'${3:pad}'}"
+  },
+  "|padRight": {
+    "prefix": "|padRight",
+    "body": "|padRight:${1:length}${2:,'${3:pad}'}"
+  },
+  "|repeat": {
+    "prefix": "|repeat",
+    "body": "|repeat:${1:count}"
+  },
+  "|implode": {
+    "prefix": "|implode",
+    "body": "|implode:'${1:glue}'"
+  },
+  "|nl2br": {
+    "prefix": "|nl2br",
+    "body": "|nl2br"
+  },
+  // Letter casing
+  "|lower": {
+    "prefix": "|lower",
+    "body": "|lower"
+  },
+  "|upper": {
+    "prefix": "|upper",
+    "body": "|upper"
+  },
+  "|firstUpper": {
+    "prefix": "|firstUpper",
+    "body": "|firstUpper"
+  },
+  "|capitalize": {
+    "prefix": "|capitalize",
+    "body": "|capitalize"
+  },
+  // Formatting
+  "|date": {
+    "prefix": "|date",
+    "body": "|date:'${1:format}'"
+  },
+  "|number": {
+    "prefix": "|number",
+    "body": "|number${1::${2:decimals}${3:,'${4:decPoint}'${5:,'${6:thousandsSep}'}}}"
+  },
+  "|bytes": {
+    "prefix": "|bytes",
+    "body": "|bytes${1::${2:precision}}"
+  },
+  // Other
+  "|dataStream": {
+    "prefix": "|dataStream",
+    "body": "|dataStream${1::${2:mimetype}}"
+  },
+  "|url": {
+    "prefix": "|url",
+    "body": "|url"
+  },
+  "|length": {
+    "prefix": "|length",
+    "body": "|length"
+  },
+  "|null": {
+    "prefix": "|null",
+    "body": "|null"
+  },
+  "|sort": {
+    "prefix": "|sort",
+    "body": "|sort"
+  },
+  "|reverse": {
+    "prefix": "|reverse",
+    "body": "|reverse"
+  },
+  "|clamp": {
+    "prefix": "|clamp",
+    "body": "|clamp: (${1:0, 255})"
+  },
+  // HTML helpers
+  "n:class": {
+    "prefix": "n:class",
+    "body": "n:class=\"${0:condition} ? ${1:active}\""
+  },
+  "n:attr": {
+    "prefix": "n:attr",
+    "body": "n:attr=\"${0:value} => ${1:\\$value}\""
+  },
+  "n:ifcontent": {
+    "prefix": "n:ifcontent",
+    "body": "n:ifcontent"
+  },
+  "n:ifchanged": {
+    "prefix": "n:ifchanged",
+    "body": "n:ifchanged"
+  },
+  "n:foreach": {
+    "prefix": "n:foreach",
+    "body": "n:foreach=\"${0:\\$items} as ${1:\\$item}\""
+  },
+  "n:inner-foreach": {
+    "prefix": "n:inner-foreach",
+    "body": "n:inner-foreach=\"${0:\\$items} as ${1:\\$item}\""
+  },
+  "n:tag-if": {
+    "prefix": "n:inner-foreach",
+    "body": "n:tag-if=\"${0:\\$url}\""
+  },
+  "n:href": {
+    "prefix": "n:href",
+    "body": "n:href=\"${0:Presenter}:${1:action} ${2:\\$arg}\""
+  },
+  "n:snippet": {
+    "prefix": "n:snippet",
+    "body": "n:snippet=\"${0:content}\""
+  }
 }
