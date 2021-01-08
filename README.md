@@ -16,11 +16,11 @@
 * Support Snippets.
 
 ### Bugs and Ideas
-* If you found a bug or you have an idea, let me know on GitHub :)
-* https://github.com/kasik96/VS-Latte
+If you found a bug or you have an idea, let me know on GitHub :)
+https://github.com/kasik96/VS-Latte
 
 ### Contributing
-* All contributions are welcomed!
+All contributions are welcomed!
 
 ### License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
