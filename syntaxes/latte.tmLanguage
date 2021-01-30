@@ -75,7 +75,7 @@
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>(?&lt;=\{)/?(block|cache|capture|define|embed|first|foreach|form|for|ifset|ifCurrent|ifchanged|if|label|last|l|sandbox|sep|snippetArea|snippet|switch|syntax|try|while)\s*</string>
+					<string>(?&lt;=\{)/?(block|cache|capture|define|embed|first|foreach|form|for|ifset|ifCurrent|ifchanged|if|label|last|l|sandbox|sep|snippetArea|snippet|switch|syntax|try|iterateWhile|while)\s*</string>
 					<key>name</key>
 					<string>keyword.control.pair.latte</string>
 				</dict>

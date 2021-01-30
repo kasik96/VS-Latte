@@ -67,6 +67,10 @@
     "prefix": "while",
     "body": "{while \\$$1 = \\$$1s->fetch()}\n$0\n{/while}"
   },
+  "iterateWhile": {
+    "prefix": "iterateWhile",
+    "body": "{iterateWhile}\n$0\n{/while}"
+  },
   "for": {
     "prefix": "for",
     "body": "{for \\$${1:i} = 0; \\$${1:i} < ${2:10}; \\$${1:i}++}\n$0\n{/for}"
