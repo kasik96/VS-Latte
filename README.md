@@ -1,4 +1,5 @@
-<h1 align="center">VS Code Language extension Nette Latte + Neon for VS Code</h1>
+<h2 align="center">Nette Latte + Neon for VS Code</h2>
+<h3 align="center">VS Code Language Extension</h2>
 <p align="center">
    <a href="https://opensource.org/licenses/MIT">
         <img src="https://img.shields.io/badge/License-MIT-green" alt="License: MIT" />
