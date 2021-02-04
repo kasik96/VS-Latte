@@ -10,6 +10,9 @@
     </a>
 </p>
 
+VS Code install - https://marketplace.visualstudio.com/items?itemName=Kasik96.latte
+Open VSX install - https://open-vsx.org/extension/kasik96/latte
+
 * This extension integrates the Latte and Neon Language extension from Nette PHP Framework into Visual Studio Code.
 * Support Colorization and Grammar.
 * Support Snippets.
