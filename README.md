@@ -21,6 +21,12 @@
 * Support Colorization and Grammar.
 * Support Snippets.
 
+### HTML snippets (Emmet) support
+Currently you can easily add HTML (Emmet built-in extension) support by adding this code to settings.json
+```
+"emmet.includeLanguages": { "latte": "html" }
+```
+
 ### Bugs and Ideas
 If you found a bug or you have an idea, let me know on GitHub :)
 https://github.com/kasik96/VS-Latte
