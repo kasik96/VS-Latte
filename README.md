@@ -12,7 +12,7 @@
    <a href="https://marketplace.visualstudio.com/items?itemName=Kasik96.latte">
         <img src="https://img.shields.io/badge/VS%20Code%20Marketplace-Install-blue" alt="VS Code Marketplace" />
     </a>
-    <a href="https://twitter.com/KasikCZ">
+    <a href="https://img.shields.io/badge/Open%20VSX%20Registry-Install-9e10c9">
         <img src="https://img.shields.io/badge/Open%20VSX%20Registry-Install-9e10c9" alt="Open VSX Registry" />
     </a>
 </p>
