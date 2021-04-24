@@ -151,6 +151,10 @@
     "prefix": "var",
     "body": "{var \\$${1:name} = 'John Smish'}\n"
   },
+  "parameters": {
+    "prefix": "parameters",
+    "body": "{parameters \n  ${1:?string} \\$${2:name},$0\n}"
+  },
   "varType": {
     "prefix": "varType",
     "body": "{varType ${0:string} \\$${1:lang}}\n"
