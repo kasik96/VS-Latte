@@ -1,0 +1,39 @@
+# SYNTAX TEST "source.neon" "Neon"
+
+# line comment
+# ^ comment.line.neon
+
+path: %appDir%/logs
+# ^^ support.other.neon
+#   ^ keyword.operator.neon
+#     ^^^^^^^^ variable.parameter.neon
+
+database: mysql
+# ^^^^^^ support.other.neon
+#       ^ keyword.operator.neon
+
+services:
+# ^^^^^^ entity.name.function.neon
+#       ^ operator.neon
+
+factory: @logger
+# ^^^^^ support.other.neon
+#        ^^^^^^^ support.class.neon
+
+timeout: 30
+#        ^^ constant.numeric.neon
+
+label: "hello"
+#      ^^^^^^^ string.quoted.double.neon
+
+name: 'world'
+#     ^^^^^^^ string.quoted.single.neon
+
+    true
+#   ^^^^ constant.language.neon
+
+    false
+#   ^^^^^ constant.language.neon
+
+    null
+#   ^^^^ constant.language.neon

@@ -1,0 +1,40 @@
+; SYNTAX TEST "source.latte" "Latte"
+
+{* block comment *}
+;^ comment.block.latte
+
+{$variable}
+;^ source.latte
+; ^ variable.other.latte
+
+{foreach $items as $item}
+; ^^^^^^ keyword.control.pair.latte
+
+{/foreach}
+; ^^^^^^^ keyword.control.pair.latte
+
+{if $x}
+; ^^ keyword.control.pair.latte
+
+{extends '../layout.latte'}
+; ^^^^^^ keyword.control.single.latte
+
+{true}
+; ^^^ constant.language.latte
+
+{42}
+; ^ constant.numeric.latte
+
+{'hello'}
+; ^^^^^^ string.quoted.single.latte
+
+{"world"}
+; ^^^^^^ string.quoted.double.latte
+
+{$name|upper}
+; ^^^^ variable.other.latte
+;     ^ keyword.other.latte
+;      ^^^^^ keyword.other.latte
+
+{$a->property}
+;  ^^ keyword.operator.latte

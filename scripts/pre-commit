@@ -1,0 +1,8 @@
+#!/bin/sh
+set -e
+echo "Running pre-commit checks..."
+if [ ! -d "node_modules/vscode-tmgrammar-test" ]; then
+  npm install --silent
+fi
+npm test
+echo "All checks passed."
