@@ -70,6 +70,11 @@
 				"language": "latte",
 				"scopeName": "source.latte",
 				"path": "./syntaxes/latte.tmLanguage"
+			},
+			{
+				"scopeName": "source.latte-injection",
+				"path": "./syntaxes/latte-html-injection.tmLanguage.json",
+				"injectTo": ["source.latte"]
 			}
 		],
 		"snippets": [

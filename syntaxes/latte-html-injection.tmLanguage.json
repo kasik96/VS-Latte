@@ -1,0 +1,75 @@
+{
+    "scopeName": "source.latte-injection",
+    "injectionSelector": "L:string.quoted.double.html, L:string.quoted.single.html",
+    "patterns": [
+        {
+            "begin": "\\{\\*",
+            "end": "\\*\\}",
+            "name": "comment.block.latte"
+        },
+        {
+            "begin": "\\{\\{?(?!\\s)",
+            "beginCaptures": {
+                "0": { "name": "tag.begin.latte" }
+            },
+            "end": "\\}?\\}",
+            "endCaptures": {
+                "0": { "name": "tag.end.latte" }
+            },
+            "name": "source.latte",
+            "patterns": [
+                {
+                    "match": "(?<=\\{)(\\![^}]*)",
+                    "name": "keyword.latte"
+                },
+                {
+                    "match": "\\b((0(x|X)[0-9a-fA-F]*)|(([0-9]+\\.?[0-9]*)|(\\.[0-9]+))((e|E)(\\+|-)?[0-9]+)?)\\b",
+                    "name": "constant.numeric.latte"
+                },
+                {
+                    "match": "\\$\\$?[a-zA-Z_0-9]+\\s*",
+                    "name": "variable.other.latte"
+                },
+                {
+                    "match": "true|TRUE|True|false|FALSE|False|null|NULL|Null",
+                    "name": "constant.language.latte"
+                },
+                {
+                    "match": "(?<=\\{)(_|=|breakIf|case|continueIf|contentType|control|debugbreak|default|bdump|dump|elseifset|elseif|else|extends|formPrint|include|import|inputError|input|layout|link|php|plink|r|status|templateType|templatePrint|use|varType|varPrint|var|parameters)\\s*",
+                    "name": "keyword.control.single.latte"
+                },
+                {
+                    "match": "(?<=\\{)/?(block|cache|capture|define|embed|first|foreach|form|for|ifset|ifCurrent|ifchanged|if|label|last|l|sandbox|sep|snippetArea|snippet|switch|syntax|try|iterateWhile|while)\\s*",
+                    "name": "keyword.control.pair.latte"
+                },
+                {
+                    "match": "(?<=\\s)(\\!|/|===|as|and|AND|And|&&|or|OR|Or|\\|\\||\\+\\+|--|==|<=>|>=|<=)\\s?",
+                    "name": "keyword.operator.latte"
+                },
+                {
+                    "match": "->",
+                    "name": "keyword.operator.latte"
+                },
+                {
+                    "match": "(?<=->)([a-zA-Z_][a-zA-Z0-9_]*)",
+                    "name": "variable.other.member.latte"
+                },
+                {
+                    "match": ".*?(\\|)(\\w+)(?:\\:([^\\|\\}]+))*",
+                    "captures": {
+                        "1": { "name": "keyword.other.latte" },
+                        "2": { "name": "keyword.other.latte" }
+                    }
+                },
+                {
+                    "match": "'(.*?)'",
+                    "name": "string.quoted.single.latte"
+                },
+                {
+                    "match": "\"(.*?)\"",
+                    "name": "string.quoted.double.latte"
+                }
+            ]
+        }
+    ]
+}

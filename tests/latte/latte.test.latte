@@ -38,3 +38,24 @@
 
 {$a->property}
 ;  ^^ keyword.operator.latte
+
+{$iterator->counter}
+;           ^^^^^^^ variable.other.member.latte
+
+{$user->name|upper}
+;       ^^^^ variable.other.member.latte
+;           ^ keyword.other.latte
+;            ^^^^^ keyword.other.latte
+
+<li id="{$item}">test</li>
+;        ^^^^^ variable.other.latte
+
+<li id="{$item|capitalize}">test</li>
+;        ^^^^^ variable.other.latte
+;             ^ keyword.other.latte
+;              ^^^^^^^^^^ keyword.other.latte
+
+<li id="item-{$iterator->counter}">test</li>
+;             ^^^^^^^^^ variable.other.latte
+;                      ^^ keyword.operator.latte
+;                        ^^^^^^^ variable.other.member.latte
