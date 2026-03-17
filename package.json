@@ -77,6 +77,11 @@
 				"language": "latte",
 				"path": "./snippets/snippets.json"
 			}
-		]
+		],
+		"configurationDefaults": {
+			"emmet.includeLanguages": {
+				"latte": "html"
+			}
+		}
 	}
 }
